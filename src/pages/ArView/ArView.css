@@ -1,0 +1,62 @@
+.ar-view {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: #0f1115;
+  color: #f2f0ea;
+}
+
+.ar-view__bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px 8px;
+}
+
+.ar-view__back {
+  color: #f2f0ea;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.ar-view__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.ar-view__price {
+  margin: 4px 0 0;
+  color: #d4c4a8;
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
+.ar-view__model {
+  display: block;
+  width: 100%;
+  flex: 1;
+  min-height: 62svh;
+  background: #0f1115;
+}
+
+.ar-view__launch {
+  margin: 16px 20px 28px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 12px;
+  background: #f2f0ea;
+  color: #111;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ar-view__error,
+.ar-view__missing {
+  margin: 0 20px 20px;
+  color: #e8eaed;
+}

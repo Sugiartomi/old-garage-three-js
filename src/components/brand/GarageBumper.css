@@ -1,0 +1,93 @@
+.garage-bumper {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121418;
+  opacity: 1;
+  transition: opacity 0.28s ease;
+}
+
+.garage-bumper.is-exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.garage-bumper__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.garage-bumper__logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(5.5rem, 22vw, 8.5rem);
+  margin-bottom: 0.85rem;
+}
+
+.garage-bumper__logo {
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.garage-bumper__logo.is-visible {
+  opacity: 1;
+}
+
+.garage-bumper__logo-img {
+  display: block;
+  height: clamp(4.8rem, 18vw, 7.5rem);
+  width: auto;
+  max-width: min(88vw, 22rem);
+}
+
+.garage-bumper__type {
+  position: relative;
+  margin: 0 -0.2em 0 0;
+  min-height: 1.2em;
+  width: max-content;
+  max-width: 100%;
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(232, 234, 237, 0.62);
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.55;
+}
+
+.garage-bumper__type.is-mobile {
+  min-height: 3.6em;
+  margin-right: 0;
+  white-space: pre-line;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.garage-bumper__type.is-mobile .garage-bumper__caret {
+  position: static;
+  margin-left: 0.15rem;
+}
+
+.garage-bumper__caret {
+  position: absolute;
+  left: calc(100% + 0.15rem);
+  top: 0;
+  width: 0.55ch;
+  color: #d4c4a8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .garage-bumper,
+  .garage-bumper__logo {
+    transition: none !important;
+  }
+}
